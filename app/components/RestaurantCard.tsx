@@ -10,10 +10,7 @@ const RestaurantCard = (props: RestaurantCardProps) => {
   const { restaurant } = props;
 
   return (
-    <div
-      className="w-64 h-72 m-3 rounded overflow-hidden border cursor-pointer"
-      key={restaurant.id}
-    >
+    <div className="w-64 h-72 m-3 rounded overflow-hidden border cursor-pointer">
       <Link href={`/restaurant/${restaurant.slug}`}>
         <img src={restaurant.main_image} alt="" className="w-full h-36" />
         <div className="p-1">
