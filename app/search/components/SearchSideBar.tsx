@@ -1,10 +1,16 @@
 import { Cuisine, Location, PRICE } from "@prisma/client";
 import Link from "next/link";
 
+export interface SearchParamsType {
+  city?: string;
+  cuisine?: string;
+  price?: PRICE;
+}
+
 interface SearchSideBarProps {
   cuisines: Cuisine[];
   locations: Location[];
-  searchParams: { city?: string; cuisine?: string; price?: PRICE };
+  searchParams: SearchParamsType;
 }
 
 const SearchSideBar = (props: SearchSideBarProps) => {
